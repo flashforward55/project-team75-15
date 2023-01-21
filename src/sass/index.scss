@@ -1,6 +1,28 @@
-@import './common';
+/* General */
+
 @import './variables';
-@import'./reset';
+@import './reset';
 @import './base';
 @import './placeholders';
+
+/*index.html*/
+
 @import './header';
+@import './hero';
+@import './scills';
+@import './work';
+@import './team';
+@import './clients';
+@import './footer';
+
+/*portfolio.html*/
+
+@import './portfolio';
+
+/*mobile-menu*/
+
+@import './mobile-menu';
+
+/* Modal */
+
+@import './modal';
