@@ -1,0 +1,69 @@
+.scills {
+  @extend %section;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__items {
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: $card-set-gap;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - $card-set-gap) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * $card-set-gap) / 4);
+
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: $secondary-text-color;
+    line-height: 1.71;
+  }
+
+  &__icons {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: $secondary-bg-color;
+  }
+
+  &__svg {
+    width: 70px;
+    height: 70px;
+  }
+}

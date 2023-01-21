@@ -1,0 +1,130 @@
+.team {
+  @extend %section;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  background-color: $secondary-bg-color;
+
+  &__title {
+    @extend %title-main;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__items {
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $card-set-gap;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - $card-set-gap) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * $card-set-gap) / 4);
+
+    }
+
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__content {
+
+    padding-top: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+    line-height: 1.19;
+
+    @media screen and (min-width: 480px) {
+      padding-top: 30px;
+      padding-right: 122px;
+      padding-bottom: 24px;
+      padding-left: 122px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-right: 74px;
+      padding-left: 74px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 30px 32px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  &__text {
+    color: $secondary-text-color;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__social-items {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 480px) {
+      gap: $social-item-gap;
+    }
+  }
+
+  &__social-item {
+    @media screen and (min-width: 480px) {
+      flex-basis: calc((100% - 3 * $social-item-gap) / 4);
+    }
+  }
+
+  &__social-link {
+    width: 44px;
+    height: 44px;
+    @extend %centeredFlex;
+    border-radius: 50%;
+    color: $social-team-color;
+
+    transition: background-color $time $transition-cubic,
+      color $time $transition-cubic;
+
+    &:hover,
+    &:focus {
+      color: $primary-white-color;
+      background-color: $accent-color;
+    }
+  }
+
+  &__social-svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}

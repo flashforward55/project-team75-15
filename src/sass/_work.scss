@@ -1,0 +1,50 @@
+.work {
+  display: none;
+  @extend %section;
+  padding-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+
+  &__title {
+    @extend %title-main;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__items {
+    @extend %list;
+    display: flex;
+    margin-left: calc(-1 * $card-set-gap);
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: calc(100% / 3 - $card-set-gap);
+    margin-left: $card-set-gap;
+  }
+
+  &__subtitle {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+    background-color: $work-subtitle-color;
+  }
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Студія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,16 +16,108 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <!-- Header -->
-    <include src="./partials/header.html"></include>
+    <include src="./header.html"></include>
     <main>
       <!-- Section 1 -->
-      <include src="./partials/hero.html"></include>
+      <include src="./hero.html"></include>
       <!-- Section 2 -->
-      <include src=""></include>
+      <include src="./scills.html"></include>
       <!-- Section 3 -->
-      <include src=""></include>
+      <include src="./work.html"></include>
+      <!-- Section 4 -->
+      <include src="./team.html"></include>
+      <!-- Section 5 -->
+      <include src="./clients.html"></include>
     </main>
     <!-- Footer -->
-    <include src=""></include>
+    <include src="./footer.html"></include>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close" type="button" data-modal-close>
+          <svg class="modal__svg">
+            <use href="./images/icons.svg#icon-closemodal"></use>
+          </svg>
+        </button>
+        <form class="form">
+          <p class="form__title">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="form__input-container">
+            <div class="form__field">
+              <label class="form__label" for="name">Ім'я</label>
+              <input
+                class="form__input"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+              <svg class="form__svg">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="tel">Телефон</label>
+              <input
+                class="form__input"
+                type="tel"
+                name="tel"
+                id="tel"
+                required
+              />
+              <svg class="form__svg">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">Пошта</label>
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+              <svg class="form__svg">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="comment">Коментар</label>
+              <textarea
+                class="form__comment form__comment--decor"
+                name="comment"
+                placeholder="Введіть текст"
+                id="comment"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form__checkbox-container">
+            <label class="form__checkbox-label" for="policy">
+              <input
+                class="form__checkbox"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+              <svg class="form__checkbox-svg">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              <span class="form__checkbox-text"
+                >Погоджуюся з розсилкою та приймаю</span
+              >&nbsp;
+              <a class="form__checkbox-link" href="#">Умови договору</a>
+            </label>
+          </div>
+          <button class="form__button" type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <script defer src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
